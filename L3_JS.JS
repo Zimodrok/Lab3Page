@@ -1,12 +1,24 @@
 "use strict";
 function returnValue(){
-    let array = document.getElementById("seq").value.split(' ');
-    for(let i =0; i < array.length; i++){
-        array[i] = parseInt(array[i])
+    let array;
+    if(document.getElementById("seq").value == ''){
+        array = parseInt([2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192]);
     }
+    else {
+        array = document.getElementById("seq").value.split(' ');
+        for(let i =0; i < array.length; i++){
+            array[i] = parseInt(array[i]);
+    }
+}
     document.getElementById("RespField").innerHTML = "";
     // let array = [1,2,3,4,5,6,7,8, 9, 10, 11]
-    const R = parseInt(document.getElementById("key").value);
+    let R;
+    if(document.getElementById("key").value.length == 0){
+        R = 16;
+    }
+    else{
+        R = parseInt(document.getElementById("key").value);
+    }
     let result = binarySearch(array, R);
     if(result == -1){
         alert("Елемент не знайденно, спробуйте перевірити массив на недопустимі символи");
