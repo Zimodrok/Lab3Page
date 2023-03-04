@@ -1,0 +1,25 @@
+<!--Розробити застосунок для демонстрацiї роботи алгоритму бiнарного пошуку.
+Користувач вводить масив i при натисканнi кнопки вiдображається масив на
+поточнiй iтерацiї. При цьому ключовий елемент повинен бути позначений жовтим.
+1) нормально виглядати у браузерах Chrome, Firefox;
+2) проходити валiдацiю HTML та CSS (validator.w3.org – все, що можна, та OnlineWebCheck); 
+3) проходити перевiрки JSLint;
+-->
+<!DOCTYPE html>
+<html lang="uk-UA">
+    <head>
+        <link rel="stylesheet" href="L3_CSS.CSS">
+        <script src="L3_JS.JS"></script>
+        <title>Демонстрація роботи алгоритму бінарного пошуку</title>
+    </head>
+    <body>
+        <div id="subBody">
+            <h1 style="font-size: 7vh;">Демонстрація роботи алгоритму бінарного пошуку</h1>
+            <input type="text" id="seq" placeholder="Введіть множину значень через пробіл:">
+            <input type="number" id="key" placeholder="Введіть число з множини:">
+            <button onclick="returnValue()">Надіслати</button>
+            <div id="RespField">
+            </div>
+        </div>
+    </body>
+</html>
